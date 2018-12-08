@@ -2,7 +2,7 @@
   <md-toolbar id="toolbar" md-elevation="0" class="md-transparent md-absolute" :class="extraNavClasses" :color-on-scroll="colorOnScroll">
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Vue Material Kit</h3>
+        <img class="md-title" id="logo" src="/img/logo_white.png" />
       </div>
       <div class="md-toolbar-section-end">
         <md-button class="md-just-icon md-simple md-toolbar-toggle" :class="{toggled: toggledClass}" @click="toggleNavbarMobile()">
@@ -33,7 +33,7 @@
                           </a>
                         </li>
                         <li>
-                          <a href="https://demos.creative-tim.com/vue-material-kit/documentation/" >
+                          <a href="/documentation" >
                             <i class="material-icons">content_paste</i>
                             <p>Documentation</p>
                           </a>
@@ -44,16 +44,16 @@
                 </a>
               </li>
 
-              <md-list-item href="https://demos.creative-tim.com/vue-material-kit/documentation/"  target="_blank" v-if="showDownload">
+              <md-list-item href="/documentation" v-if="showDownload">
                 <i class="material-icons">content_paste</i>
                 <p>Documentation</p>
               </md-list-item>
-
+              <!--
               <md-list-item href="javascript:void(0)" @click="scrollToElement()" v-if="showDownload">
                 <i class="material-icons">cloud_download</i>
                 <p>Download</p>
               </md-list-item>
-
+              -->
               <li class="md-list-item" v-else>
                 <a href="javascript:void(0)" class="md-list-item-router md-list-item-container md-button-clean dropdown">
                   <div class="md-list-item-content">
@@ -268,14 +268,17 @@ export default {
       let scrollValue =
         document.body.scrollTop || document.documentElement.scrollTop;
       let navbarColor = document.getElementById("toolbar");
+      let navbarLogo = document.getElementById("logo");
       this.currentScrollValue = scrollValue;
       if (this.colorOnScroll > 0 && scrollValue > this.colorOnScroll) {
         this.extraNavClasses = `md-${this.type}`;
         navbarColor.classList.remove("md-transparent");
+        navbarLogo.src = "/img/logo_black.png";
       } else {
         if (this.extraNavClasses) {
           this.extraNavClasses = "";
           navbarColor.classList.add("md-transparent");
+          navbarLogo.src = "/img/logo_white.png";
         }
       }
     },

@@ -9,6 +9,9 @@ import DefaultFooter from "@/layouts/default/Footer.vue";
 //DashboardLayout
 import DashboardLayout from "@/layouts/dashboard/Layout.vue";
 
+//Documentation Support
+import SwaggerOAuth2 from "@/assets/swagger/OAuth2.vue";
+
 //Pages
 import Blank from "@/views/Blank.vue";
 
@@ -30,6 +33,37 @@ const router = new Router({
         layout: "redirect",
         location: "/",
         authName: mainAuth.authName
+      }
+    },
+    {
+      path: "/documentation",
+      name: "documentation",
+      meta: {
+        layout: "default"
+      },
+      props: {
+        header: { colorOnScroll: 10 }
+      },
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "default" */ "./views/Documentation.vue"),
+        header: DefaultNavbar,
+        footer: DefaultFooter
+      }
+    },
+    {
+      path: "/swagger/oauth2",
+      name: "swagger-oauth2",
+      meta: {
+        layout: "default"
+      },
+      props: {
+        header: { colorOnScroll: 10 }
+      },
+      components: {
+        default: SwaggerOAuth2,
+        header: DefaultNavbar,
+        footer: DefaultFooter
       }
     },
     {
