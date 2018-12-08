@@ -1,0 +1,62 @@
+{
+  "name": "hoppa-app",
+  "version": "0.0.1",
+  "description": "The hoppa webinterface.",
+  "homepage": "https://hoppa.app",
+  "repository": "bitbucket.org:hoppa-app/website",
+  "license": "MIT",
+  "author": "Nick Duijvelshoff <nick@duijvelshoff.com> (https://duijvelshoff.com/)",
+  "contributors": [
+    "Patrick Witting <witting.patrick@gmail.com>"
+  ],
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "chartist": "0.11.0",
+    "google-maps": "3.3.0",
+    "nouislider": "12.1.0",
+    "register-service-worker": "1.5.2",
+    "v-tooltip": "2.0.0-rc.33",
+    "vue": "2.5.17",
+    "vue-carousel": "0.16.1",
+    "vue-clickaway": "2.2.2",
+    "vue-lazyload": "1.2.6",
+    "vue-loading-overlay": "3.1.0",
+    "vue-material": "1.0.0-beta-10.2",
+    "vue-oidc-client": "0.2.7",
+    "vue-router": "3.0.1",
+    "vuex": "3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "3.2.0",
+    "@vue/cli-plugin-eslint": "3.2.1",
+    "@vue/cli-plugin-pwa": "3.2.0",
+    "@vue/cli-service": "3.2.0",
+    "@vue/eslint-config-prettier": "4.0.1",
+    "babel-eslint": "10.0.1",
+    "es6-promise": "4.2.5",
+    "eslint": "5.9.0",
+    "eslint-plugin-vue": "5.0.0",
+    "lint-staged": "8.1.0",
+    "node-sass": "4.10.0",
+    "sass-loader": "7.1.0",
+    "vue-template-compiler": "2.5.17"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
