@@ -1,7 +1,5 @@
 .DS_Store
 node_modules
-/dist
-/azure
 
 # local deployment file
 deploy_to_azure
