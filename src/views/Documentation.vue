@@ -1,5 +1,5 @@
 <template>
- <div class="wrapper">
+<div class="wrapper">
   <parallax class="section page-header header-filter" :style="headerStyle"></parallax>
   <div class="main main-raised">
     <div class="section">
@@ -8,8 +8,8 @@
           <h2>Documentation</h2>
           <h4>The <b>hoppa</b> functionalities are also accessable via our api. This documentation describes the endpoints for developers, to enabled them building new awesomeness.</h4>
         </div>
-        <div id="swagger-ui"></div>
       </div>
+      <div class="container" id="swagger-ui"></div>
     </div>
   </div>
 </div>
@@ -43,9 +43,9 @@ export default {
     const ui = SwaggerUIBundle({
       url: "https://service.dev.tada.red/openapi.json",
       dom_id: "#swagger-ui",
+      layout: "HoppaLayout",
       deepLinking: true,
       presets: [SwaggerUIBundle.presets.apis],
-      defaultModelsExpandDepth: -1,
       oauth2RedirectUrl: loco.protocol + "//" + loco.host + "/swagger/oauth2"
     });
 
@@ -61,9 +61,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.information-container {
-  display: none !important;
-}
-</style>

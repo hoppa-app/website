@@ -20,7 +20,7 @@
     "google-maps": "3.3.0",
     "nouislider": "12.1.0",
     "register-service-worker": "1.5.2",
-    "swagger-ui": "3.20.2",
+    "swagger-ui": "github:hoppa-app/swagger-ui",
     "v-tooltip": "2.0.0-rc.33",
     "vue": "2.5.17",
     "vue-carousel": "0.16.1",
