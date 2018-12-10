@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d9c90b5e01e739c1c693",
+    "revision": "316e4ec524a78e5c5792",
     "url": "/css/app.3749a307.css"
   },
   {
-    "revision": "d9c90b5e01e739c1c693",
-    "url": "/js/app.f5ebb818.js"
+    "revision": "316e4ec524a78e5c5792",
+    "url": "/js/app.feb87108.js"
   },
   {
     "revision": "e1acc0800a8dff60cba2",
@@ -156,8 +156,12 @@ self.__precacheManifest = [
     "url": "/img/vue-logo.c2a605fb.png"
   },
   {
-    "revision": "a9b31732377fcccf33c488bc89be6bc8",
+    "revision": "cdd537f3ba59f27d2f50caa3da935f98",
     "url": "/index.html"
+  },
+  {
+    "revision": "b76e9b5ffb7a706eb1d8a9c3b1569ae4",
+    "url": "/img/logo_white.png"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
@@ -170,9 +174,5 @@ self.__precacheManifest = [
   {
     "revision": "8314589053427b603d59bdb55eb675ac",
     "url": "/web.config"
-  },
-  {
-    "revision": "b76e9b5ffb7a706eb1d8a9c3b1569ae4",
-    "url": "/img/logo_white.png"
   }
 ];

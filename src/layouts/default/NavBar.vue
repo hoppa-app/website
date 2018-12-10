@@ -17,32 +17,6 @@
               <!-- Here you can add your items from the section-start of your toolbar -->
             </mobile-menu>
             <md-list>
-              <li class="md-list-item" v-if="!showDownload">
-                <a href="javascript:void(0)" class="md-list-item-router md-list-item-container md-button-clean dropdown">
-                  <div class="md-list-item-content">
-                    <drop-down direction="down">
-                      <md-button slot="title" class="md-button md-button-link md-white md-simple dropdown-toggle" data-toggle="dropdown">
-                        <i class="material-icons">apps</i>
-                        <p>Components</p>
-                      </md-button>
-                      <ul class="dropdown-menu dropdown-with-icons">
-                        <li>
-                          <a href="#/">
-                            <i class="material-icons">layers</i>
-                            <p>All Components</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/documentation" >
-                            <i class="material-icons">content_paste</i>
-                            <p>Documentation</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </drop-down>
-                  </div>
-                </a>
-              </li>
 
               <md-list-item href="/documentation" v-if="showDownload">
                 <i class="material-icons">content_paste</i>
@@ -54,35 +28,38 @@
                 <p>Download</p>
               </md-list-item>
               -->
-              <li class="md-list-item" v-else>
+              <li class="md-list-item" v-if="$oidc.isAuthenticated">
                 <a href="javascript:void(0)" class="md-list-item-router md-list-item-container md-button-clean dropdown">
                   <div class="md-list-item-content">
                     <drop-down direction="down">
                       <md-button slot="title" class="md-button md-button-link md-white md-simple dropdown-toggle" data-toggle="dropdown">
-                        <i class="material-icons">view_carousel</i>
-                        <p>Examples</p>
+                        <i class="far fa-user"></i>
+                        <p>{{$oidc.user.profile.name}}</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
-                          <a href="#/landing">
-                            <i class="material-icons">view_day</i>
-                            <p>Landing Page</p>
+                          <a href="/dashboard">
+                            <i class="fas fa-columns"></i>
+                            <p>Dashboard</p>
                           </a>
                         </li>
                         <li>
-                          <a href="#/login">
-                            <i class="material-icons">fingerprint</i>
-                            <p>Login Page</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#/profile">
-                            <i class="material-icons">account_circle</i>
-                            <p>Profile Page</p>
+                          <a>
+                            <i class="fas fa-sign-out-alt"></i>
+                            <p id="logout" @click="$oidc.signOut();">Logout</p>
                           </a>
                         </li>
                       </ul>
                     </drop-down>
+                  </div>
+                </a>
+              </li>
+
+              <li v-if="!$oidc.isAuthenticated" class="md-list-item">
+                <a class="md-list-item-link md-list-item-container md-button-clean">
+                  <div class="md-list-item-content md-ripple">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <p id="login" @click="$oidc.signIn();" >Login</p>
                   </div>
                 </a>
               </li>

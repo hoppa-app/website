@@ -8,7 +8,6 @@ const oidcSettings = {
   authority:
     "https://login.microsoftonline.com/bcf0d084-d9b8-4a8f-a8f5-6c0784ee1d4b",
   client_id: "e9cd7680-cfa4-4cfd-bae3-bf11765594a7",
-  redirect_uri: "http://localhost:8080/oidc-callback",
   response_type: "id_token token",
   scope: " ",
   extraQueryParams: { resource: "ac39737d-53a9-42d2-a71a-7a46e7978d46" },
