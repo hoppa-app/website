@@ -229,7 +229,8 @@ export default {
     colorOnScroll: {
       type: Number,
       default: 0
-    }
+    },
+    showExample: null
   },
   data() {
     return {
