@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.72b387250f42f930e0fba425597d3d77.js"
+  "/precache-manifest.e4077cb577280643325f79111e71105b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "hoppa-app"});

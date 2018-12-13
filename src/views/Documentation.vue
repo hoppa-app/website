@@ -41,7 +41,7 @@ export default {
     const loco = window.location;
     // Begin Swagger UI call region
     const ui = SwaggerUIBundle({
-      url: "https://service.dev.tada.red/openapi.json",
+      url: "https://service.dev.hoppa.app/api/v1.0/openapi",
       dom_id: "#swagger-ui",
       layout: "HoppaLayout",
       deepLinking: true,
@@ -52,7 +52,7 @@ export default {
     ui.initOAuth({
       clientId: "0241abf4-45be-43a1-a2c1-34ec257dbaba",
       additionalQueryStringParams: {
-        resource: "ac39737d-53a9-42d2-a71a-7a46e7978d46"
+        resource: "2b7f804c-48fd-4efc-bfca-5e8b99c7bfe1"
       }
     });
     // End Swagger UI call region
