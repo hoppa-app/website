@@ -14,10 +14,12 @@ Vue.config.productionTip = false;
 import Default from "./layouts/Default.vue";
 import Dashboard from "./layouts/Dashboard.vue";
 import Redirect from "./layouts/Redirect.vue";
+import Wizzard from "./layouts/Wizzard.vue";
 
 Vue.component("default-layout", Default);
 Vue.component("dashboard-layout", Dashboard);
 Vue.component("redirect-layout", Redirect);
+Vue.component("wizzard-layout", Wizzard);
 
 // Navbar Fix
 const NavbarStore = {

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "09ba3bfd09b3d7b25d87",
-    "url": "/css/app.3749a307.css"
+    "revision": "b92638505be5921c3354",
+    "url": "/css/app.e826fcac.css"
   },
   {
-    "revision": "09ba3bfd09b3d7b25d87",
-    "url": "/js/app.f6a56756.js"
+    "revision": "b92638505be5921c3354",
+    "url": "/js/app.0789b9f6.js"
   },
   {
     "revision": "e1acc0800a8dff60cba2",
@@ -30,6 +30,14 @@ self.__precacheManifest = [
   {
     "revision": "3f6b6c804f1abcf06487",
     "url": "/js/default.e19b1952.js"
+  },
+  {
+    "revision": "cf57d968cdb3c79dec74",
+    "url": "/css/wizzard.0c92ec1b.css"
+  },
+  {
+    "revision": "cf57d968cdb3c79dec74",
+    "url": "/js/wizzard.6f66c624.js"
   },
   {
     "revision": "3b3fb65f693a19e0e317d13027c50b98",
@@ -82,6 +90,26 @@ self.__precacheManifest = [
   {
     "revision": "52e4b9baf9894423f7b11e020f04821a",
     "url": "/img/profile.52e4b9ba.jpg"
+  },
+  {
+    "revision": "f4769f9bdb7466be65088239c12046d1",
+    "url": "/fonts/glyphicons-halflings-regular.f4769f9b.eot"
+  },
+  {
+    "revision": "448c34a56d699c29117adc64c43affeb",
+    "url": "/fonts/glyphicons-halflings-regular.448c34a5.woff2"
+  },
+  {
+    "revision": "fa2772327f55d8198301fdb8bcfc8158",
+    "url": "/fonts/glyphicons-halflings-regular.fa277232.woff"
+  },
+  {
+    "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
+    "url": "/fonts/glyphicons-halflings-regular.e18bbf61.ttf"
+  },
+  {
+    "revision": "89889688147bd7575d6327160d64e760",
+    "url": "/img/glyphicons-halflings-regular.89889688.svg"
   },
   {
     "revision": "92760707225e5e2a1c7eb1c395f7b4c8",
@@ -156,12 +184,8 @@ self.__precacheManifest = [
     "url": "/img/vue-logo.c2a605fb.png"
   },
   {
-    "revision": "95bcb71b6aa6b98cc309c564a30218c0",
+    "revision": "51571070e65ec723b08cb44eb55cb4dd",
     "url": "/index.html"
-  },
-  {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
-    "url": "/robots.txt"
   },
   {
     "revision": "b76e9b5ffb7a706eb1d8a9c3b1569ae4",
@@ -172,7 +196,35 @@ self.__precacheManifest = [
     "url": "/img/logo_black.png"
   },
   {
+    "revision": "86cd8df67f0d32e4fcbbf2a7fde2729e",
+    "url": "/js/material-bootstrap-wizard.js"
+  },
+  {
+    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "url": "/robots.txt"
+  },
+  {
     "revision": "8314589053427b603d59bdb55eb675ac",
     "url": "/web.config"
+  },
+  {
+    "revision": "1f196fc34c225d79c43d041bab0c0832",
+    "url": "/js/jquery.bootstrap.js"
+  },
+  {
+    "revision": "3b00d60f87e893caf2649eff0d48813a",
+    "url": "/js/jquery.validate.min.js"
+  },
+  {
+    "revision": "4becdc9104623e891fbb9d38bba01be4",
+    "url": "/js/bootstrap.min.js"
+  },
+  {
+    "revision": "2f6b11a7e914718e0290410e85366fe9",
+    "url": "/js/jquery-2.2.4.min.js"
+  },
+  {
+    "revision": "953dd5bbdf09c7bc44f25748dfdd2d20",
+    "url": "/img/wizard-profile.jpg"
   }
 ];

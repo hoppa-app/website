@@ -52,6 +52,20 @@ const router = new Router({
       }
     },
     {
+      path: "/newuser",
+      name: "wizzard-newuser",
+      meta: {
+        layout: "wizzard"
+      },
+      props: {},
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "wizzard" */ "./views/wizzards/NewUser.vue"),
+        header: DefaultNavbar,
+        footer: DefaultFooter
+      }
+    },
+    {
       path: "/swagger/oauth2",
       name: "swagger-oauth2",
       meta: {
