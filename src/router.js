@@ -52,15 +52,17 @@ const router = new Router({
       }
     },
     {
-      path: "/newuser",
-      name: "wizzard-newuser",
+      path: "/initialize",
+      name: "initialize",
       meta: {
-        layout: "wizzard"
+        layout: "default"
       },
-      props: {},
+      props: {
+        header: { colorOnScroll: 10 }
+      },
       components: {
         default: () =>
-          import(/* webpackChunkName: "wizzard" */ "./views/wizzards/NewUser.vue"),
+          import(/* webpackChunkName: "default" */ "./views/Initialize.vue"),
         header: DefaultNavbar,
         footer: DefaultFooter
       }
