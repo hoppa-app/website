@@ -37,7 +37,7 @@
                           </md-field>
                         </div>
                         <div class="md-layout-item md-size-100 text-right">
-                          <md-button class="md-raised md-success" @click="submitProfile();wizardCompleted();">Update Profile</md-button>
+                          <md-button class="md-raised md-success" @click="submitProfile();">Update Profile</md-button>
                         </div>
                       </div>
                     </div>
@@ -77,7 +77,6 @@
 </template>
 
 <script>
-var axios = require("axios");
 //Style
 import "@/assets/scss/material-kit.scss";
 export default {
@@ -151,23 +150,31 @@ export default {
       console.log(id);
       this.currenttab = id;
     },
+    wizardCompleted: function() {
+      window.location = "/";
+    },
     submitProfile: function() {
       var config = {
         headers: { Authorization: "Bearer " + this.$oidc.accessToken }
       };
-      console.log("Hallo");
-      axios.post(
-        "http://localhost:5000/api/v1.0/people",
-        {
-          "@odata.type": "hoppa.Service.Model.Person",
-          DisplayName: this.firstname + " " + this.lastname,
-          EmailAddress: this.emailadress
-        },
-        config
-      );
-    },
-    wizardCompleted: function() {
-      window.location = "/";
+      this.axios
+        .post(
+          "/people",
+          {
+            "@odata.type": "hoppa.Service.Model.Person",
+            DisplayName: this.firstname + " " + this.lastname,
+            EmailAddress: this.emailadress
+          },
+          config
+        )
+        .then(response => {
+          console.log(response);
+          this.wizardCompleted();
+        })
+        .catch(error => {
+          console.log(error);
+          this.errored = true;
+        });
     }
   }
 };

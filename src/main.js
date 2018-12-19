@@ -19,6 +19,11 @@ Vue.component("default-layout", Default);
 Vue.component("dashboard-layout", Dashboard);
 Vue.component("redirect-layout", Redirect);
 
+import axios from "axios";
+import VueAxios from "vue-axios";
+axios.defaults.baseURL = process.env.VUE_APP_ROOT_API;
+Vue.use(VueAxios, axios);
+
 // Navbar Fix
 const NavbarStore = {
   showNavbar: false

@@ -169,7 +169,6 @@
 </template>
 
 <script>
-var axios = require("axios");
 let resizeTimeout;
 function resizeThrottler(actualResizeHandler) {
   // ignore resize events as long as an actualResizeHandler execution is in the queue
@@ -275,18 +274,27 @@ export default {
     }
   },
   created() {
-    var config = {
+    if (this.$oidc.isAuthenticated) {
+      var config = {
       headers: { Authorization: "Bearer " + this.$oidc.accessToken }
-    };
-    axios
-      .get("http://localhost:5000/api/v1.0/person", config)
-      .then(response => {
-        this.user.displayname = response.data.DisplayName;
-      })
-      .catch(error => {
-        console.log(error);
-        this.errored = true;
-      });
+      };
+      this.axios
+        .get("/person?$select=DisplayName,Guid", config)
+        .then(response => {
+          if(response.data.Guid == "00000000-0000-0000-0000-000000000000")
+          {
+            window.location = "/initialize";
+          }
+          else
+          {
+            this.user.displayname = response.data.DisplayName;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          this.errored = true;
+        });
+    }
   },
   mounted() {
     document.addEventListener("scroll", this.scrollListener);

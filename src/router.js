@@ -53,9 +53,9 @@ const router = new Router({
     },
     {
       path: "/initialize",
-      name: "initialize",
+      name: "default",
       meta: {
-        layout: "default",
+        layout: "initialize",
         authName: mainAuth.authName
       },
       props: {
