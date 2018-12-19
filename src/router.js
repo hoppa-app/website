@@ -55,7 +55,8 @@ const router = new Router({
       path: "/initialize",
       name: "initialize",
       meta: {
-        layout: "default"
+        layout: "default",
+        authName: mainAuth.authName
       },
       props: {
         header: { colorOnScroll: 10 }

@@ -10,7 +10,7 @@ const oidcSettings = {
   client_id: "e9cd7680-cfa4-4cfd-bae3-bf11765594a7",
   response_type: "id_token token",
   scope: " ",
-  extraQueryParams: { resource: "ac39737d-53a9-42d2-a71a-7a46e7978d46" },
+  extraQueryParams: { resource: "2b7f804c-48fd-4efc-bfca-5e8b99c7bfe1" },
   loadUserInfo: false,
   metadata: {
     issuer: "https://sts.windows.net/bcf0d084-d9b8-4a8f-a8f5-6c0784ee1d4b/",

@@ -34,7 +34,7 @@
                     <drop-down direction="down">
                       <md-button slot="title" class="md-button md-button-link md-white md-simple dropdown-toggle" data-toggle="dropdown">
                         <i class="far fa-user"></i>
-                        <p>{{$oidc.user.profile.name}}</p>
+                        <p>{{user.displayname}}</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
@@ -169,6 +169,7 @@
 </template>
 
 <script>
+var axios = require("axios");
 let resizeTimeout;
 function resizeThrottler(actualResizeHandler) {
   // ignore resize events as long as an actualResizeHandler execution is in the queue
@@ -212,7 +213,10 @@ export default {
   data() {
     return {
       extraNavClasses: "",
-      toggledClass: false
+      toggledClass: false,
+      user: {
+        displayname: null
+      }
     };
   },
   computed: {
@@ -269,6 +273,20 @@ export default {
         element_id.scrollIntoView({ block: "end", behavior: "smooth" });
       }
     }
+  },
+  created() {
+    var config = {
+      headers: { Authorization: "Bearer " + this.$oidc.accessToken }
+    };
+    axios
+      .get("http://localhost:5000/api/v1.0/person", config)
+      .then(response => {
+        this.user.displayname = response.data.DisplayName;
+      })
+      .catch(error => {
+        console.log(error);
+        this.errored = true;
+      });
   },
   mounted() {
     document.addEventListener("scroll", this.scrollListener);
